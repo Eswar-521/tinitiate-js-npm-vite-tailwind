@@ -1,8 +1,48 @@
-# React + Vite
+## JS NPM Vite Tailwind Project (`js-npm-vite-tailwind`)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Project Creation
 
-Currently, two official plugins are available:
+```sh
+# Create a new Vite project with React template
+npm create vite@latest js-npm-vite-tailwind 
+```
+# Navigate to the project directory
+```sh
+cd js-npm-vite-tailwind
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Installing Dependencies
+
+```sh
+# Install necessary dependencies
+npm install
+
+# Install Tailwind CSS
+```sh
+npm install tailwindcss @tailwindcss/vite
+```
+
+### Configuring Tailwind CSS
+
+- Update `vite,config.js`:
+
+```js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [react(),tailwindcss()],
+})
+```
+
+### Add an `@import` to your CSS file that imports Tailwind CSS
+
+```css
+@import "tailwindcss"
+```
+
+### Run your build process with npm run dev or whatever command is configured in your package.json file.
+
+```sh
+npm run dev
+```
