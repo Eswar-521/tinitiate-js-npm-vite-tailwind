@@ -1,44 +1,32 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Signing up with:", email, password);
-  };
-
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Signup</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-3 border border-gray-300 rounded mb-4 focus:ring-2 focus:ring-green-500"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full p-3 border border-gray-300 rounded mb-4 focus:ring-2 focus:ring-green-500"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit" className="w-full bg-green-600 text-white p-3 rounded-lg hover:bg-green-700 transition">
-            Signup
-          </button>
+    <div className="flex justify-center items-center max-h-screen bg-gray-50">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 className="text-3xl font-bold text-center mb-4">Sign Up</h2>
+        <form>
+          <div className="mb-4">
+            <label className="block font-semibold">Name:</label>
+            <input type="text" className="w-full p-2 border rounded" placeholder="Enter your name" required />
+          </div>
+          <div className="mb-4">
+            <label className="block font-semibold">Email:</label>
+            <input type="email" className="w-full p-2 border rounded" placeholder="Enter your email" required />
+          </div>
+          <div className="mb-4">
+            <label className="block font-semibold">Password:</label>
+            <input type="password" className="w-full p-2 border rounded" placeholder="Create a password" required />
+          </div>
+          <button className="w-full bg-green-500 text-white p-2 rounded">Sign Up</button>
         </form>
-        <p className="mt-4 text-center text-gray-600">
-          Already have an account? <Link to="/login" className="text-green-600 font-semibold">Login</Link>
-        </p>
+        <div className="mt-4 text-center">
+          Already have an account? <Link to="/login" className="text-blue-500">Login</Link>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Signup;
+

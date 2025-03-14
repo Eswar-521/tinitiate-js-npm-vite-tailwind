@@ -1,41 +1,27 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Logging in with:", email, password);
-  };
-
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Login</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-3 border border-gray-300 rounded mb-4 focus:ring-2 focus:ring-blue-500"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full p-3 border border-gray-300 rounded mb-4 focus:ring-2 focus:ring-blue-500"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
-            Login
-          </button>
+    <div className="flex justify-center items-center max-h-screen bg-gray-50">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 className="text-3xl font-bold text-center mb-4">Login</h2>
+        <form>
+          <div className="mb-4">
+            <label className="block font-semibold">Email:</label>
+            <input type="email" className="w-full p-2 border rounded" placeholder="Enter your email" required />
+          </div>
+          <div className="mb-4">
+            <label className="block font-semibold">Password:</label>
+            <input type="password" className="w-full p-2 border rounded" placeholder="Enter your password" required />
+          </div>
+          <button className="w-full bg-blue-500 text-white p-2 rounded">Login</button>
         </form>
-        <p className="mt-4 text-center text-gray-600">
-          Don't have an account? <Link to="/signup" className="text-blue-600 font-semibold">Sign up</Link>
-        </p>
+        <div className="mt-4 text-center">
+          <Link to="/forgot-password" className="text-blue-500">Forgot Password?</Link>
+        </div>
+        <div className="mt-2 text-center">
+          Don't have an account? <Link to="/signup" className="text-blue-500">Sign Up</Link>
+        </div>
       </div>
     </div>
   );
