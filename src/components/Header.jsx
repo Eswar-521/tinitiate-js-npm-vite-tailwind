@@ -1,7 +1,7 @@
 const Header = () => {
     return (
-      <header className="bg-gray-800 text-white text-center p-4 text-3xl font-bold shadow-md">
-        Welcome to My Website
+      <header className="bg-blue-600 text-white p-4 text-center">
+        <h1>My Website</h1>
       </header>
     );
   };
