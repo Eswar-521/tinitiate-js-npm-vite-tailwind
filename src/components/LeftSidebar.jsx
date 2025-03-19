@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Home, Briefcase, Phone, User, LogIn, UserPlus } from "lucide-react"; // ✅ Icons
 import Logo from "../assets/logo.png"; // ✅ Import the image
 
+
 const LeftSidebar = () => {
   return (
     <aside className="w-64 bg-gray-900 text-white h-screen p-6 flex flex-col items-center shadow-lg">
