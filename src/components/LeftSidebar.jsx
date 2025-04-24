@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom";
-import { Home, Briefcase, Phone, User, LogIn, UserPlus } from "lucide-react"; // ✅ Icons
-import Logo from "../assets/logo.png"; // ✅ Import the image
-
+import { Home, Briefcase, Phone, User, LogIn, UserPlus } from "lucide-react";
+import ProfileImage from "../assets/profile.png"; // ✅ Updated to use profile.png
 
 const LeftSidebar = () => {
   return (
     <aside className="w-64 bg-gray-900 text-white h-screen p-6 flex flex-col items-center shadow-lg">
-      {/* Image at the top */}
-      <img src={Logo} alt="Logo" className="w-24 h-24 mb-6 rounded-full border-4 border-gray-700 shadow-md" />
+      {/* Profile Image with hover effect and project title */}
+      <div className="text-center mb-6">
+        <img
+          src={ProfileImage}
+          alt="Profile"
+          className="w-24 h-24 mx-auto rounded-full border-4 border-gray-700 shadow-md hover:scale-105 transition-transform duration-300"
+        />
+        <h2 className="mt-3 text-xl font-bold tracking-wide">My Project</h2>
+      </div>
 
       {/* Navigation Links */}
       <nav className="w-full">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import searchData from "../data/coursesData";
+import searchData from "../data/coursesData"; // Import your courses data
 
 const Catalog = ({ searchQuery }) => {
   const [filteredProducts, setFilteredProducts] = useState(searchData.products);
@@ -69,7 +69,7 @@ const Catalog = ({ searchQuery }) => {
             >
               <div className="h-32 bg-gray-200 flex items-center justify-center">
                 <img
-                  src={product.image}
+                  src={product.image} // Image is now being imported properly
                   alt={product.name}
                   className="h-24 w-24 object-cover"
                 />

@@ -12,7 +12,8 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
-import Catalog from "./pages/Catalog";
+import Catalog from "./pages/Catalog"; // Catalog will include the image gallery
+import courseCatalogo from './components/courseCatalogo';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -32,7 +33,11 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/catalog" element={<Catalog searchQuery={searchQuery} />} />
+            <Route
+              path="/catalog"
+              element={<Catalog searchQuery={searchQuery} />}
+            />
+            <Route path="/coursecatalog" element={<courseCatalogo />} />
           </Routes>
         </main>
         <RightSidebar />
