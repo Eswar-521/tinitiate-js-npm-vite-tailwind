@@ -35,6 +35,16 @@ import ShoppingCart from "./pages/ShoppingCart";
 import Calendar from "./pages/Calendar"
 import Audio from "./pages/Audio";
 
+import Style1 from "./pages/Style1"
+import Style2 from "./pages/Style2"
+import Profile1 from "./pages/Profile1";
+import Login1 from "./pages/Login1";
+import Signup1 from "./pages/Signup1"
+import Catalogo1 from "./pages/Catalogo1"
+import Comparison1 from "./pages/Comparison1"
+import Search1 from "./pages/Search1";
+import Infographics1 from "./pages/Infographics1";
+import ComparisonTable1 from "./pages/ComparisonTable1"
 
 
 function App() {
@@ -49,8 +59,10 @@ function App() {
         <main className="flex-1 p-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/style1" element={<Style1/>}/>
+            <Route path="/style2" element={<Style2/>}/>
 
+            <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/profile" element={<Profile />} />
@@ -79,7 +91,16 @@ function App() {
             <Route path="/editor" element={<Editor />} />
             <Route path="/shopping-cart" element={<ShoppingCart />} />
             <Route path="/calendar" element={<Calendar />} />
-          
+
+            <Route path="/Profile1" element={<Profile1/>}/>
+            <Route path="/Login1" element={<Login1/>}/>
+            <Route path="/signup1" element={<Signup1/>}/>
+            <Route path="/Catalogo1" element={<Catalogo1/>}/>
+            <Route path="/comparison1" element={<Comparison1 />} />
+            <Route path="/Search1" element={<Search1/>}/>
+            <Route path="/infographics1" element={<Infographics1/>}/>
+            <Route path="/ComparisonTable1" element={<ComparisonTable1/>}/>
+
           </Routes>
         </main>
         <RightSidebar />
