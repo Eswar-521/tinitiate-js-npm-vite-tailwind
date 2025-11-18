@@ -1,48 +1,42 @@
-## JS NPM Vite Tailwind Project (`js-npm-vite-tailwind`)
 
-### Project Creation
+# 🚀 TINITIATE JS / NPM / Vite / Tailwind Project
 
-```sh
-# Create a new Vite project with React template
-npm create vite@latest js-npm-vite-tailwind 
-```
-# Navigate to the project directory
-```sh
-cd js-npm-vite-tailwind
-```
+Welcome to the official TINITIATE Frontend Project built using  
+**JavaScript + NPM + Vite + TailwindCSS**.
 
-### Installing Dependencies
+This project has a clean documentation structure.  
+Click on the folders below to open guides.
 
-```sh
-# Install necessary dependencies
-npm install
+---
 
-# Install Tailwind CSS
-```sh
-npm install tailwindcss @tailwindcss/vite
-```
+## 📁 Documentation
 
-### Configuring Tailwind CSS
+### 1️⃣ **About the Project**
+📂 Folder → `docs/about-project`  
+🔗 Open: [About Project](docs/about-project/README.md)
 
-- Update `vite,config.js`:
+---
 
-```js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-export default defineConfig({
-  plugins: [react(),tailwindcss()],
-})
-```
+### 2️⃣ **How to Run the Project**
+📂 Folder → `docs/how-to-run`  
+🔗 Open: [How to Run](docs/how-to-run/README.md)
 
-### Add an `@import` to your CSS file that imports Tailwind CSS
+---
 
-```css
-@import "tailwindcss"
-```
+### 3️⃣ **Extra Guides**
+📂 Folder → `docs/extra-guides`  
+🔗 Open: [Extra Guides](docs/extra-guides/README.md)
 
-### Run your build process with npm run dev or whatever command is configured in your package.json file.
+---
 
-```sh
-npm run dev
-```
+## 🛠️ Tech Stack
+
+| Technology | Use |
+|-----------|-----|
+| **Vite** | Ultra-fast bundler & dev server |
+| **TailwindCSS** | Utility-first styling |
+| **JavaScript (ES6)** | Main scripting |
+| **NPM** | Package manager |
+
+---
+
